@@ -1,0 +1,10 @@
+---
+import Header from '../components/Header.astro';
+import Form from '../components/Form.tsx';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Header slot="Header" />
+	<Form slot="Form" client:load />
+</Layout>

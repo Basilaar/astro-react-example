@@ -1,0 +1,35 @@
+---
+import background from '../assets/background.svg';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Test Screen</title>
+	</head>
+	<body>
+		<div class="font-[Inter,Roboto,'Helvetica_Neue','Arial_Nova','Nimbus_Sans',Arial,sans-serif] h-full flex flex-col md:block">
+			<main class="h-full justify-center">
+				<slot name="Header"/>
+				<slot name="Form"/>
+			</main>
+		</div>
+	</body>
+</html>
+
+<style define:vars={{ bgUrl: `url(${background.src})` }}>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bgUrl) no-repeat center center fixed;
+		background-size: cover;
+	}
+</style>
