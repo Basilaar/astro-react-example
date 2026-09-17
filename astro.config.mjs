@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://basilaar.github.io', 
-  base: '/astro-react-test',
+  base: '/astro-react-example',
 
   integrations: [react()],
   server: {
